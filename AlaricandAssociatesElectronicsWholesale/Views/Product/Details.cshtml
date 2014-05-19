@@ -1,0 +1,57 @@
+﻿@model AlaricandAssociatesElectronicsWholesale.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QtyInStock)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QtyInStock)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.categoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Supplier.supplierName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Supplier.supplierName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

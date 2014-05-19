@@ -1,0 +1,29 @@
+﻿@model AlaricandAssociatesElectronicsWholesale.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.categoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentCategories.categoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentCategories.categoryName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CategoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

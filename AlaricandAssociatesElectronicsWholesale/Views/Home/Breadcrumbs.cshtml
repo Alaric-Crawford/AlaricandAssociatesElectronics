@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AlaricandAssociatesElectronicsWholesale.Models.Category>
+
+<ul>
+    <li>
+        <a href="@Url.Action("Index", "home")">Home
+        </a>
+    </li>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("ByCategory", "Shop", new { id = item.CategoryID })">
+                @item.categoryName
+            </a>
+        </li>
+    }
+</ul>

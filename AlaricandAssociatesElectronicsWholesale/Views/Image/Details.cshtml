@@ -1,0 +1,43 @@
+﻿@model AlaricandAssociatesElectronicsWholesale.Models.Image
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Image</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.imageName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.imageName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.imageURL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.imageURL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.imageDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.imageDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product.productName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product.productName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ImageID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

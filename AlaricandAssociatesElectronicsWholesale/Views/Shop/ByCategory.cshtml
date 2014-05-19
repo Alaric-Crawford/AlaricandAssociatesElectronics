@@ -1,0 +1,14 @@
+﻿@model AlaricandAssociatesElectronicsWholesale.Models.Category
+
+@{
+    ViewBag.Title = "ByCategory";
+}
+
+<h2>Browsing @Model.categoryName</h2>
+
+@Html.Action("breadcrumbs", "home", new{id = Model.CategoryID})
+
+@foreach (var product in Model.AllProducts)
+{
+    @Html.Partial("productListing", product)
+}

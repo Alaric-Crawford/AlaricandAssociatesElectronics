@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AlaricandAssociatesElectronicsWholesale.Models.Image>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.imageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imageDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.productName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imageDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.productName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ImageID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ImageID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ImageID })
+        </td>
+    </tr>
+}
+
+</table>
