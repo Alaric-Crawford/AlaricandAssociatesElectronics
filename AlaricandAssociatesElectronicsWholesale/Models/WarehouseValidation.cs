@@ -19,7 +19,7 @@ namespace AlaricandAssociatesElectronicsWholesale.Models
         public string categoryName;
 
         [Display(Name = "Item Class")]
-        public string ParentCategories;
+        public string ParentCategory;
     }
 
     [MetadataType(typeof(ImageMetadata))]

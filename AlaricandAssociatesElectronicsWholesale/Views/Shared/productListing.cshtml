@@ -3,10 +3,16 @@
 <div class="productListing">
     @if (Model.Images.Any())
     {
-        <img src="@Model.Images.First().imageURL"
+        <a href="@Url.Action("Details", "Product", new { id = Model.ProductID })">
+            <img src="@Model.Images.First().imageURL"
             alt="@Model.Images.First().imageDescription" />
-    } else {
-        <img src="http://ecx.images-amazon.com/images/I/41LKk0MC%2BJL._SX300_.jpg" />
+        </a>
+    }
+    else
+    {
+        <a href="@Url.Action("Details", "Product", new { id = Model.ProductID })">
+            <img src="http://ecx.images-amazon.com/images/I/41LKk0MC%2BJL._SX300_.jpg" />
+        </a>
     }
     <div>@Model.productName</div>
     <div>@Model.Price.ToString("C")</div>

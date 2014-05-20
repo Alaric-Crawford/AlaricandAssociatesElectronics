@@ -61,9 +61,17 @@ textarea {
 }
 
 .productListing {
-    text-align: center;
+    float: left;
+    margin-left: 4%;
 }
 
+#name {
+    float: left;
+    font-weight: bold;
+}
+#price {
+
+}
 @charset 'UTF-8';
 /* Starter CSS for Menu */
 #cssmenu {
